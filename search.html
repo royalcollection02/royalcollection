@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Search | Royal Collection</title>
+
+    <!-- FONT AWESOME -->
+    <script
+        src="https://kit.fontawesome.com/a5b5e10f1d.js"
+        crossorigin="anonymous">
+    </script>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #faf9f7;
+
+            color: #222;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .search-header {
+
+            width: 100%;
+
+            padding: 25px 6%;
+
+            background: #fff;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+
+        .back-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .back-btn:hover {
+
+            color: #9b6a35;
+
+        }
+
+
+        .search-title {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .search-title span {
+
+            display: block;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #9b6a35;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .search-title h1 {
+
+            font-size: 36px;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           SEARCH BOX
+        ===================================================== */
+
+        .search-container {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            border: 1px solid #ccc;
+
+            background: #fff;
+
+            height: 52px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+        }
+
+
+        .search-container:focus-within {
+
+            border-color: #9b6a35;
+
+        }
+
+
+        #searchInput {
+
+            flex: 1;
+
+            height: 100%;
+
+            border: none;
+
+            outline: none;
+
+            padding: 0 20px;
+
+            font-size: 15px;
+
+        }
+
+
+        #searchButton {
+
+            width: 60px;
+
+            height: 100%;
+
+            border: none;
+
+            background: #222;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+        }
+
+
+        #searchButton:hover {
+
+            background: #9b6a35;
+
+        }
+
+
+        /* =====================================================
+           SEARCH RESULTS
+        ===================================================== */
+
+        .results-section {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 45px 6%;
+
+        }
+
+
+        .results-heading {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .results-heading h2 {
+
+            font-size: 22px;
+
+            font-weight: 500;
+
+        }
+
+
+        #resultCount {
+
+            color: #888;
+
+            font-size: 13px;
+
+            margin-top: 7px;
+
+        }
+
+
+        /* =====================================================
+           PRODUCTS GRID
+        ===================================================== */
+
+        .search-products {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .search-product {
+
+            background: #fff;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            border: 1px solid #eee;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .search-product:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.08);
+
+        }
+
+
+        .search-product-image {
+
+            width: 100%;
+
+            height: 320px;
+
+            overflow: hidden;
+
+            background: #f3f3f3;
+
+        }
+
+
+        .search-product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.4s ease;
+
+        }
+
+
+        .search-product:hover img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        .search-product-info {
+
+            padding: 18px;
+
+        }
+
+
+        .search-product-info h3 {
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            line-height: 1.4;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .search-price {
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: #9b6a35;
+
+        }
+
+
+        /* =====================================================
+           NO RESULTS
+        ===================================================== */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+        }
+
+
+        .no-results i {
+
+            font-size: 45px;
+
+            color: #aaa;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .no-results h2 {
+
+            font-size: 24px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .no-results p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           INITIAL MESSAGE
+        ===================================================== */
+
+        .initial-message {
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: #777;
+
+        }
+
+
+        .initial-message i {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+
+            color: #aaa;
+
+        }
+
+
+        .initial-message h2 {
+
+            color: #333;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .search-products {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+
+            .search-product-image {
+
+                height: 280px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .search-header {
+
+                padding: 20px 5%;
+
+            }
+
+
+            .search-title h1 {
+
+                font-size: 28px;
+
+            }
+
+
+            .search-products {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 15px;
+
+            }
+
+
+            .search-product-image {
+
+                height: 230px;
+
+            }
+
+
+            .search-product-info {
+
+                padding: 13px;
+
+            }
+
+
+            .search-product-info h3 {
+
+                font-size: 14px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 430px) {
+
+            .search-title h1 {
+
+                font-size: 25px;
+
+            }
+
+
+            .search-container {
+
+                height: 48px;
+
+            }
+
+
+            #searchInput {
+
+                font-size: 13px;
+
+                padding: 0 15px;
+
+            }
+
+
+            #searchButton {
+
+                width: 52px;
+
+            }
+
+
+            .results-section {
+
+                padding: 30px 15px;
+
+            }
+
+
+            .search-products {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 10px;
+
+            }
+
+
+            .search-product-image {
+
+                height: 190px;
+
+            }
+
+
+            .search-product-info h3 {
+
+                font-size: 13px;
+
+            }
+
+
+            .search-price {
+
+                font-size: 14px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="search-header">
+
+        <a
+            href="index.html"
+            class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+
+        <div class="search-title">
+
+            <span>ROYAL COLLECTION</span>
+
+            <h1>Search Products</h1>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products..."
+                autocomplete="off"
+            >
+
+            <button
+                id="searchButton"
+                type="button">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         RESULTS
+    ===================================================== -->
+
+    <main class="results-section">
+
+
+        <div class="results-heading">
+
+            <h2>
+                Search Results
+            </h2>
+
+            <p id="resultCount">
+                Search for something to see products.
+            </p>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div
+            id="searchProducts"
+            class="search-products">
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            id="noResults"
+            class="no-results">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <h2>
+                No Products Found
+            </h2>
+
+            <p>
+                Try searching with another product name.
+            </p>
+
+        </div>
+
+
+        <!-- INITIAL -->
+
+        <div
+            id="initialMessage"
+            class="initial-message">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h2>
+                Find Your Favourite Product
+            </h2>
+
+            <p>
+                Search for dresses, bags, kids wear,
+                accessories and more.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           PRODUCTS DATABASE
+        ===================================================== */
+
+        const products = [
+
+            {
+                name: "Pakistani Cotton Lawn Suit Set",
+                price: "₹1,899",
+                image: "images/lawn-suit.jpg"
+            },
+
+
+            {
+                name: "Elegant Faux Leather Sling Bag",
+                price: "₹999",
+                image: "images/bag.jpg"
+            },
+
+
+            {
+                name: "Dual-Brand Luxury Bag Set",
+                price: "₹1,499",
+                image: "images/luxury-bag.jpg"
+            },
+
+
+            {
+                name: "Black & Red Contrast Salwar Suit",
+                price: "₹1,799",
+                image: "images/salwar.jpg"
+            },
+
+
+            {
+                name: "Compact Daily Bag",
+                price: "₹799",
+                image: "images/daily-bag.jpg"
+            },
+
+
+            {
+                name: "Everyday Canvas Tote Bag",
+                price: "₹699",
+                image: "images/tote.jpg"
+            },
+
+
+            {
+                name: "Minimalist Bag",
+                price: "₹899",
+                image: "images/minimalist-bag.jpg"
+            },
+
+
+            {
+                name: "Multi-Pocket Travel Pouch",
+                price: "₹499",
+                image: "images/pouch.jpg"
+            },
+
+
+            {
+                name: "Haldi Special Floral Kids Kurti",
+                price: "₹899",
+                image: "images/kids-kurti.jpg"
+            },
+
+
+            {
+                name: "Kids Powder Blue Salwar Suit",
+                price: "₹1,199",
+                image: "images/kids-suit.jpg"
+            },
+
+
+            {
+                name: "Everyday Cord-Set",
+                price: "₹1,299",
+                image: "images/cord-set.jpg"
+            },
+
+
+            {
+                name: "Summer Cotton Floral Dress",
+                price: "₹1,499",
+                image: "images/floral-dress.jpg"
+            },
+
+
+            {
+                name: "Kurta and Palazzo Co-ord Set",
+                price: "₹1,699",
+                image: "images/palazzo.jpg"
+            },
+
+
+            {
+                name: "Boutique Boxy Oversized Tee",
+                price: "₹699",
+                image: "images/oversized-tee.jpg"
+            },
+
+
+            {
+                name: "Modest Hijab Fashion 2-Piece Tunic Set",
+                price: "₹1,499",
+                image: "images/hijab-set.jpg"
+            },
+
+
+            {
+                name: "Embroidered Silk Gown",
+                price: "₹2,499",
+                image: "images/gown.jpg"
+            },
+
+
+            {
+                name: "Georgette Multi-Color Anarkali Suit Set",
+                price: "₹2,199",
+                image: "images/anarkali.jpg"
+            },
+
+
+            {
+                name: "Layered Butterfly Charm Bracelet",
+                price: "₹399",
+                image: "images/bracelet.jpg"
+            },
+
+
+            {
+                name: "Gold Crystal Floral Bracelet",
+                price: "₹499",
+                image: "images/gold-bracelet.jpg"
+            },
+
+
+            {
+                name: "Chic Pearl Chain Ring Bracelet",
+                price: "₹449",
+                image: "images/pearl-bracelet.jpg"
+            }
+
+        ];
+
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const searchButton =
+            document.getElementById("searchButton");
+
+        const searchProducts =
+            document.getElementById("searchProducts");
+
+        const noResults =
+            document.getElementById("noResults");
+
+        const initialMessage =
+            document.getElementById("initialMessage");
+
+        const resultCount =
+            document.getElementById("resultCount");
+
+
+
+        /* =====================================================
+           DISPLAY PRODUCTS
+        ===================================================== */
+
+        function displayProducts(productList) {
+
+            searchProducts.innerHTML = "";
+
+
+            productList.forEach(function(product) {
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "search-product";
+
+
+                card.innerHTML = `
+
+                    <div class="search-product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                        >
+
+                    </div>
+
+
+                    <div class="search-product-info">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <p class="search-price">
+                            ${product.price}
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                searchProducts.appendChild(card);
+
+            });
+
+        }
+
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        function performSearch() {
+
+            const searchText =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            /* EMPTY */
+
+            if (searchText === "") {
+
+                searchProducts.innerHTML = "";
+
+                noResults.style.display = "none";
+
+                initialMessage.style.display = "block";
+
+                resultCount.textContent =
+                    "Search for something to see products.";
+
+                return;
+
+            }
+
+
+            initialMessage.style.display = "none";
+
+
+            /* FILTER */
+
+            const filteredProducts =
+                products.filter(function(product) {
+
+                    return product.name
+                        .toLowerCase()
+                        .includes(searchText);
+
+                });
+
+
+            /* RESULTS */
+
+            if (filteredProducts.length > 0) {
+
+                noResults.style.display = "none";
+
+                displayProducts(filteredProducts);
+
+
+                resultCount.textContent =
+                    filteredProducts.length +
+                    " product(s) found";
+
+            }
+
+
+            /* NO RESULTS */
+
+            else {
+
+                searchProducts.innerHTML = "";
+
+                noResults.style.display = "block";
+
+                resultCount.textContent =
+                    "0 products found";
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           SEARCH BUTTON
+        ===================================================== */
+
+        searchButton.addEventListener(
+            "click",
+            performSearch
+        );
+
+
+
+        /* =====================================================
+           ENTER KEY
+        ===================================================== */
+
+        searchInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    performSearch();
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           LIVE SEARCH
+        ===================================================== */
+
+        searchInput.addEventListener(
+            "input",
+            performSearch
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+ 
+
+
+
+   <main class="cart-page-container">
+    <h2 class="cart-page-title">Shopping Cart</h2>
+    
+    <div class="cart-content-wrapper">
+        <!-- LEFT SIDE: Product Table (Dynamic via JS) -->
+        <div class="cart-items-section" id="cartPageItems">
+            <!-- Dynamic items will render here -->
+        </div>
+
+        <!-- RIGHT SIDE: Order Summary Card -->
+        <div class="cart-summary-section">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span class="free-shipping">₹70</span>
+            </div>
+            <hr class="summary-divider">
+            <div class="summary-row total-row">
+                <span>Total Amount</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <p class="exchange-policy-note">⚠️ Note: Only Exchange | No Return allowed on this order.</p>
+            <button class="place-order-btn" onclick="checkoutAction()">Place Order (COD)</button>
+        </div>
+    </div>
+</main>
+ <script src="script.js"></script>
+
+<script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+
+</body>
+</html> 

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | Royal Collection</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= BACK BUTTON ================= -->
+
+    <div class="orders-back">
+        <button onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </button>
+    </div>
+
+
+    <!-- ================= ORDERS PAGE ================= -->
+
+    <main class="orders-page">
+
+        <div class="orders-container">
+
+
+            <!-- ================= HEADER ================= -->
+
+            <div class="orders-header">
+
+                <div>
+                    <span class="orders-small-title">
+                        ROYAL COLLECTION
+                    </span>
+
+                    <h1>My Orders</h1>
+
+                    <p>
+                        View your orders, delivery status and tracking information.
+                    </p>
+                </div>
+
+                <a href="index.html" class="continue-shopping">
+                    Continue Shopping
+                </a>
+
+            </div>
+
+
+            <!-- ================= ORDER LIST ================= -->
+
+            <section id="ordersList" class="orders-list">
+
+                <!-- Orders will be added by JavaScript -->
+
+            </section>
+
+
+            <!-- ================= NO ORDERS ================= -->
+
+            <section id="noOrders" class="no-orders">
+
+                <div class="no-orders-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h2>No Orders Yet</h2>
+
+                <p>
+                    You haven't placed any orders yet.
+                    Start shopping and your orders will appear here.
+                </p>
+
+                <a href="new.html">
+                    SHOP NOW
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= ORDER DETAILS POPUP ================= -->
+
+    <div id="orderDetailsPopup" class="order-details-popup">
+
+        <div class="order-details-box">
+
+            <button
+                class="order-popup-close"
+                id="orderPopupClose">
+                ×
+            </button>
+
+
+            <div class="order-popup-header">
+
+                <span>ORDER DETAILS</span>
+
+                <h2 id="popupOrderId">
+                    Order #RC000000
+                </h2>
+
+            </div>
+
+
+            <!-- PRODUCT -->
+
+            <div
+                id="popupProducts"
+                class="popup-products">
+            </div>
+
+
+            <!-- ORDER INFORMATION -->
+
+            <div class="popup-order-info">
+
+                <div>
+                    <span>Order Date</span>
+                    <strong id="popupOrderDate">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Payment</span>
+                    <strong>
+                        Cash on Delivery
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Total</span>
+                    <strong id="popupOrderTotal">
+                        ₹0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- ================= TRACKING ================= -->
+
+            <div class="tracking-section">
+
+                <h3>Order Tracking</h3>
+
+
+                <div class="tracking-timeline">
+
+                    <!-- CONFIRMED -->
+
+                    <div
+                        class="tracking-step active"
+                        data-status="confirmed">
+
+                        <div class="tracking-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="tracking-text">
+
+                            <strong>
+                                Order Confirmed
+                            </strong>
+
+                            <span>
+                                Your order has been confirmed.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PACKED -->
+
+                    <div
+                        class="tracking-step"
+                        data-status="packed">
+
+                        <div class="tracking-circle">
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+
+                        <div class="tracking-text">
+
+                            <strong>
+                                Packed
+                            </strong>
+
+                            <span>
+                                Your order is being prepared.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SHIPPED -->
+
+                    <div
+                        class="tracking-step"
+                        data-status="shipped">
+
+                        <div class="tracking-circle">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <div class="tracking-text">
+
+                            <strong>
+                                Shipped
+                            </strong>
+
+                            <span>
+                                Your order is on the way.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DELIVERED -->
+
+                    <div
+                        class="tracking-step"
+                        data-status="delivered">
+
+                        <div class="tracking-circle">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div class="tracking-text">
+
+                            <strong>
+                                Delivered
+                            </strong>
+
+                            <span>
+                                Your order has been delivered.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY ADDRESS -->
+
+            <div class="popup-address">
+
+                <h3>Delivery Address</h3>
+
+                <p id="popupAddress">
+                    —
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

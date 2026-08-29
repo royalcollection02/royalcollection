@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | Royal Collection</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body class="profile-body">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="profile-topbar">
+
+        <button
+            class="profile-back-btn"
+            onclick="history.back()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Back</span>
+
+        </button>
+
+
+        <h1>ROYAL COLLECTION</h1>
+
+
+        <a href="cart.html"
+           class="profile-cart">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartcount">0</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= PROFILE PAGE ================= -->
+
+    <main class="profile-container">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="profile-page-heading">
+
+            <span>MY ACCOUNT</span>
+
+            <h2>Welcome back, <span id="profileName">User</span></h2>
+
+            <p id="profileEmail">
+                your@email.com
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= PROFILE HERO ================= -->
+
+        <section class="profile-main-card">
+
+
+            <!-- LEFT -->
+
+            <div class="profile-user-section">
+
+                <div class="profile-avatar"
+                     id="profileInitial">
+
+                    U
+
+                </div>
+
+
+                <div class="profile-user-info">
+
+                    <h3 id="profileFullName">
+                        User Name
+                    </h3>
+
+                    <p id="profileEmailValue">
+                        email@example.com
+                    </p>
+
+                    <span class="profile-status">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Account Active
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <button
+                class="profile-edit-btn"
+                onclick="editProfile()">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Profile
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ================= ACCOUNT DETAILS ================= -->
+
+        <section class="account-section">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>PERSONAL INFORMATION</span>
+
+                    <h3>Account Details</h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="account-details-grid">
+
+
+                <!-- NAME -->
+
+                <div class="account-detail-card">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <small>FULL NAME</small>
+
+                        <p id="profileFullName">
+                            User Name
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="account-detail-card">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <small>EMAIL ADDRESS</small>
+
+                        <p id="profileEmailValue">
+                            email@example.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="account-detail-card">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <div>
+
+                        <small>PHONE NUMBER</small>
+
+                        <p id="profilePhone">
+                            0000000000
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADDRESS -->
+
+                <div class="account-detail-card address-card">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <small>DELIVERY ADDRESS</small>
+
+                        <p id="profileAddress">
+                            Your address
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ACCOUNT ACTIONS ================= -->
+
+        <section class="profile-actions">
+
+
+            <!-- ORDERS -->
+
+            <a href="orders.html"
+               class="profile-action-card">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+                <div class="action-text">
+
+                    <h3>My Orders</h3>
+
+                    <p>
+                        View your orders and tracking details
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+
+            </a>
+
+
+
+            <!-- SHOPPING -->
+
+            <a href="new.html"
+               class="profile-action-card">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+                <div class="action-text">
+
+                    <h3>Continue Shopping</h3>
+
+                    <p>
+                        Explore our latest collection
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+
+            </a>
+
+
+
+            <!-- LOGOUT -->
+
+            <button
+                class="profile-action-card logout-card"
+                onclick="logoutUser()">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                </div>
+
+                <div class="action-text">
+
+                    <h3>Logout</h3>
+
+                    <p>
+                        Sign out from this device
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right action-arrow"></i>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ================= FOOTER NOTE ================= -->
+
+        <div class="profile-footer-note">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>
+                Your account information is saved securely on this device.
+            </span>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+

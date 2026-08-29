@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+  <nav>
+         <ul>
+            <div>
+            
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+                <h1 class="royal">
+             ROYAL COLLECTION
+                </h1>
+            </div>
+            <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+                
+                 <span class="icon-box">
+    <li>
+        <a href="cart.html" class="cart-link-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartcount">0</span>
+        </a>
+    </li>
+    <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+</span>
+        </ul> 
+</nav>
+<div class="side-menu">
+
+    <button class="close-btn" >×</button>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</div>
+
+
+<!-- PREMIUM BACK ARROW TO CATEGORIES -->
+<div class="back-navigation-container">
+    <a href="cate.html" class="back-arrow-link">
+        <i class="fa-solid fa-arrow-left-long"></i> 
+    </a>
+</div>
+
+
+    <!-- KIDS PAGE HEADER -->
+<header class="kids-catalog-header">
+    <div class="header-overlay-tint">
+        <h2>Kids' Collection</h2>
+        <p>Comfortable, durable, and trendy styles built for non-stop play</p>
+    </div>
+</header>
+
+<!-- CATALOG CONTROL BAR -->
+<div class="catalog-control-bar">
+    <span class="results-count">Showing 2 Products</span>
+    <div class="catalog-filters">
+        <select id="sort-kids">
+            <option value="popular">Sort: Popular</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+</div>
+
+<!-- MAIN CATALOG PRODUCTS CONTAINER -->
+<main class="kids-products-section">
+    <div class="kids-products-grid">
+        
+        <!-- PRODUCT 1 -->
+        <div class="kids-product-card">
+            <div class="kids-media-wrapper">
+                <span class="kids-tag-ribbon">Trendy</span>
+                <img src="imgs/IMG-20260821-WA0004.jpg" alt="Floral Kids Kurti" class="kids-img-front">
+                <img src="imgs/IMG-20260821-WA0004.jpg" alt="Floral Kids Kurti" class="kids-img-back">
+                 <button class="kids-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="kids-meta">
+                <h4 class="kids-title">Haldi Special Floral Kids Kurti</h4>
+                <p class="kids-cost">₹399</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="kids-product-card">
+            <div class="kids-media-wrapper">
+                <span class="kids-tag-ribbon">Comfy Set</span>
+                <img src="imgs/IMG-20260821-WA0005 (2).jpg" alt="Salwar Suit" class="kids-img-front">
+                <img src="imgs/IMG-20260821-WA0005 (2).jpg" alt="Salwar Suit" class="kids-img-back">
+                <button class="kids-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="kids-meta">
+                <h4 class="kids-title">Kids Powder Blue Salwar Suit</h4>
+                <p class="kids-cost">₹799</p>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+```html
+<!-- ================= KIDS PRODUCT POPUP ================= -->
+
+<div id="kidsPopup" class="kids-popup">
+
+    <div class="kids-popup-box">
+
+        <button id="kidsPopupClose" class="kids-popup-close">
+            ×
+        </button>
+
+        <div class="kids-popup-image-area">
+
+            <img
+                id="kidsPopupImg"
+                src=""
+                alt="Kids Product"
+            >
+
+        </div>
+
+
+        <div class="kids-popup-details">
+
+            <span class="kids-popup-label">
+                ROYAL COLLECTION
+            </span>
+
+            <h2 id="kidsPopupName"></h2>
+
+            <h3 id="kidsPopupPrice"></h3>
+
+            <p id="kidsPopupDescription"></p>
+
+
+            <div class="kids-popup-quantity">
+
+                <span>Quantity</span>
+
+                <div class="kids-quantity-controls">
+
+                    <button id="kidsQtyMinus">
+                        −
+                    </button>
+
+                    <span id="kidsQtyNumber">
+                        1
+                    </span>
+
+                    <button id="kidsQtyPlus">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button id="kidsAddCart" class="kids-add-cart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+
+<script src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+</body>
+</html>

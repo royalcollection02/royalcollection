@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <nav>
+         <ul>
+            <div>
+            
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+                <h1 class="royal">
+             ROYAL COLLECTION
+                </h1>
+            </div>
+            <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+                
+                 <span class="icon-box">
+    <li>
+        <a href="cart.html" class="cart-link-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartcount">0</span>
+        </a>
+    </li>
+    <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+</span>
+        </ul> 
+</nav>
+<div class="side-menu">
+
+    <button class="close-btn" >×</button>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</div>
+
+
+
+<!-- PREMIUM BACK ARROW TO CATEGORIES -->
+<div class="back-navigation-container">
+    <a href="cate.html" class="back-arrow-link">
+        <i class="fa-solid fa-arrow-left-long"></i> 
+    </a>
+</div>
+
+
+<!-- ACCESSORIES PAGE HEADER -->
+<header class="accessories-catalog-header">
+    <div class="header-overlay-tint">
+        <h2>Accessories Collection</h2>
+        <p>Affordable, trendy style add-ons and everyday fashion accents</p>
+    </div>
+</header>
+
+<!-- CATALOG CONTROL BAR -->
+<div class="catalog-control-bar">
+    <span class="results-count">Showing 7 Products</span>
+    <div class="catalog-filters">
+        <select id="sort-accessories">
+            <option value="popular">Sort: Popular</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+</div>
+
+<!-- MAIN CATALOG PRODUCTS CONTAINER -->
+<main class="accessories-products-section">
+    <div class="accessories-products-grid">
+        
+        <!-- PRODUCT 1 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">Best Seller</span>
+                <img src="imgs/IMG-20260827-WA0019.jpg" alt="Layered Butterfly Charm Bracelet" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0019.jpg" alt="Layered Butterfly Charm Bracelet" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Layered Butterfly Charm Bracelet</h4>
+                <p class="accessories-cost">₹299</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">Trending</span>
+                <img src="imgs/IMG-20260827-WA0022.jpg" alt="Gold Crystal Floral Bracelet" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0022.jpg" alt="Gold Crystal Floral Bracelet" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Gold Crystal Floral Bracelet</h4>
+                <p class="accessories-cost">₹399</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">Comfort Fit</span>
+                <img src="imgs/IMG-20260827-WA0002.jpg" alt="Chic Pearl Chain Ring Bracelet" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0002.jpg" alt="Chic Pearl Chain Ring Bracelet" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Chic Pearl Chain Ring Bracelet</h4>
+                <p class="accessories-cost">₹199</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">New Arrival</span>
+                <img src="imgs/IMG-20260827-WA0005.jpg" alt="Dainty Linked Finger Bracelet" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0005.jpg" alt="Dainty Linked Finger Bracelet" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Dainty Linked Finger Bracelet</h4>
+                <p class="accessories-cost">₹499</p>
+            </div>
+        </div>
+        <!-- PRODUCT 5 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">New Arrival</span>
+                <img src="imgs/IMG-20260827-WA00143.jpg" alt="Minimalist Gold Hand Harness" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA00143.jpg" alt="Minimalist Gold Hand Harness" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Minimalist Gold Hand Harness</h4>
+                <p class="accessories-cost">₹499</p>
+            </div>
+        </div>
+        <!-- PRODUCT 6 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">New Arrival</span>
+                <img src="imgs/IMG-20260827-WA0014 (2).jpg" alt="Geometric Ring Hand Harness" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0014 (2).jpg" alt="Geometric Ring Hand Harness" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Geometric Ring Hand Harness</h4>
+                <p class="accessories-cost">₹499</p>
+            </div>
+        </div>
+        <!-- PRODUCT 7 -->
+        <div class="accessories-product-card">
+            <div class="accessories-media-wrapper">
+                <span class="accessories-tag-ribbon">New Arrival</span>
+                <img src="imgs/IMG-20260827-WA0003.jpg" alt="Chic Star Charm Ring Bracelet" class="accessories-img-front">
+                <img src="imgs/IMG-20260827-WA0003.jpg" alt="Chic Star Charm Ring Bracelete" class="accessories-img-back">
+                <button class="accessories-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="accessories-meta">
+                <h4 class="accessories-title">Chic Star Charm Ring Bracelet</h4>
+                <p class="accessories-cost">₹499</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+```html
+<!-- ================= ACCESSORIES PRODUCT POPUP ================= -->
+
+<div id="accessoriesPopup" class="accessories-popup">
+
+    <div class="accessories-popup-box">
+
+        <button id="accessoriesPopupClose"
+                class="accessories-popup-close">
+            ×
+        </button>
+
+
+        <div class="accessories-popup-image-area">
+
+            <img id="accessoriesPopupImg"
+                 src=""
+                 alt="Accessories Product">
+
+        </div>
+
+
+        <div class="accessories-popup-details">
+
+            <span class="accessories-popup-label">
+                ROYAL COLLECTION
+            </span>
+
+
+            <h2 id="accessoriesPopupName"></h2>
+
+
+            <h3 id="accessoriesPopupPrice"></h3>
+
+
+            <p id="accessoriesPopupDescription"></p>
+
+
+            <!-- QUANTITY -->
+
+            <div class="accessories-popup-quantity">
+
+                <span>Quantity</span>
+
+                <div class="accessories-quantity-controls">
+
+                    <button id="accessoriesQtyMinus">
+                        −
+                    </button>
+
+                    <span id="accessoriesQtyNumber">
+                        1
+                    </span>
+
+                    <button id="accessoriesQtyPlus">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD TO CART -->
+
+            <button id="accessoriesAddCart"
+                    class="accessories-add-cart">
+
+                ADD TO CART
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+
+<script src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+</body>
+</html>

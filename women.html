@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <nav>
+         <ul>
+            <div>
+            
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+                <h1 class="royal">
+             ROYAL COLLECTION
+                </h1>
+            </div>
+            <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+                
+                 <span class="icon-box">
+    <li>
+        <a href="cart.html" class="cart-link-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartcount">0</span>
+        </a>
+    </li>
+    <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+</span>
+        </ul> 
+</nav>
+<div class="side-menu">
+
+    <button class="close-btn" >×</button>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</div>
+
+
+
+<!-- PREMIUM BACK ARROW TO CATEGORIES -->
+<div class="back-navigation-container">
+    <a href="cate.html" class="back-arrow-link">
+        <i class="fa-solid fa-arrow-left-long"></i> 
+    </a>
+</div>
+
+
+<!-- WOMEN'S PAGE HEADER -->
+<header class="women-catalog-header">
+    <div class="header-overlay-tint">
+        <h2>Women's Collection</h2>
+        <p>Trendy, comfortable, and affordable everyday fashion staples</p>
+    </div>
+</header>
+
+<!-- CATALOG CONTROL BAR -->
+<div class="catalog-control-bar">
+    <span class="results-count">Showing 6 Products</span>
+    <div class="catalog-filters">
+        <select id="sort-women">
+            <option value="popular">Sort: Popular</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+</div>
+
+<!-- MAIN CATALOG PRODUCTS CONTAINER -->
+<main class="women-products-section">
+    <div class="women-products-grid">
+        
+        <!-- PRODUCT 1 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">Trending</span>
+                <img src="imgs/IMG-20260821-WA0007.jpg" alt="Casual Top Front" class="women-img-front">
+                <img src="imgs/IMG-20260821-WA0007.jpg" alt="Casual Top Alternative" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title">Everyday Cord-Set</h4>
+                <p class="women-cost">₹499</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">Best Seller</span>
+                <img src="imgs/IMG-20260821-WA0026.JPG" alt="Floral Dress Front" class="women-img-front">
+                <img src="imgs/IMG-20260821-WA0026.JPG" alt="Floral Dress Alternative" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title">Summer Cotton Floral Dress</h4>
+                <p class="women-cost">₹799</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">New Fit</span>
+                <img src="imgs/IMG-20260827-WA0006.JPG" alt="Kurta and Palazzo Co-ord Set" class="women-img-front">
+                <img src="imgs/IMG-20260827-WA0006.jpg" alt="Kurta and Palazzo Co-ord Set" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title"> Kurta and Palazzo Co-ord Set</h4>
+                <p class="women-cost">₹899</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">New</span>
+                <img src="imgs/IMG-20260827-WA0024.jpg" alt="Oversized T-shirt Front" class="women-img-front">
+                <img src="imgs/IMG-20260827-WA0024.jpg" alt="Oversized T-shirt Alternative" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title">Boutique Boxy Oversized Tee</h4>
+                <p class="women-cost">₹699</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">Premium Quality</span>
+                <img src="imgs/img2.jpg" alt="Modest Hijab Fashion 2-Piece Tunic Set" class="women-img-front">
+                <img src="imgs/img2.jpg" alt="Modest Hijab Fashion 2-Piece Tunic Set" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title">Modest Hijab Fashion 2-Piece Tunic Set</h4>
+                <p class="women-cost">₹599</p>
+            </div>
+        </div>
+        <!-- PRODUCT 6 -->
+        <div class="women-product-card">
+            <div class="women-media-wrapper">
+                <span class="women-tag-ribbon">Premium Suit</span>
+                <img src="imgs/IMG-20260821-WA0016 (2).jpg" alt="Oversized T-shirt Front" class="women-img-front">
+                <img src="imgs/IMG-20260821-WA0016 (2).jpg" alt="Oversized T-shirt Alternative" class="women-img-back">
+                <button class="women-cart-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="women-meta">
+                <h4 class="women-title">Elegant Navy Blue Pure Satin Rayon <br>
+                    Heavy Ivory Embroidered Kaftan & Pant Set</h4>
+                <p class="women-cost">₹899</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+```html
+<!-- ================= WOMEN PRODUCT POPUP ================= -->
+
+<div id="womenPopup" class="women-popup">
+
+    <div class="women-popup-box">
+
+        <button id="womenPopupClose" class="women-popup-close">
+            ×
+        </button>
+
+        <div class="women-popup-image-area">
+
+            <img
+                id="womenPopupImg"
+                src=""
+                alt="Women's Product"
+            >
+
+        </div>
+
+
+        <div class="women-popup-details">
+
+            <span class="women-popup-label">
+                ROYAL COLLECTION
+            </span>
+
+            <h2 id="womenPopupName"></h2>
+
+            <h3 id="womenPopupPrice"></h3>
+
+            <p id="womenPopupDescription"></p>
+
+
+            <div class="women-popup-quantity">
+
+                <span>Quantity</span>
+
+                <div class="women-quantity-controls">
+
+                    <button id="womenQtyMinus">
+                        −
+                    </button>
+
+                    <span id="womenQtyNumber">
+                        1
+                    </span>
+
+                    <button id="womenQtyPlus">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="womenAddCart"
+                class="women-add-cart"
+            >
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+
+<script src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <nav>
+         <ul>
+            <div>
+            
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+                <h1 class="royal">
+             ROYAL COLLECTION
+                </h1>
+            </div>
+            <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+                
+                 <span class="icon-box">
+    <li>
+        <a href="cart.html" class="cart-link-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartcount">0</span>
+        </a>
+    </li>
+    <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+</span>
+        </ul> 
+</nav>
+<div class="side-menu">
+
+    <button class="close-btn" >×</button>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</div>
+
+
+
+<!-- PREMIUM BACK ARROW TO CATEGORIES -->
+<div class="back-navigation-container">
+    <a href="cate.html" class="back-arrow-link">
+        <i class="fa-solid fa-arrow-left-long"></i> 
+    </a>
+</div>
+
+
+<!-- BAGS PAGE HEADER -->
+<header class="bags-catalog-header">
+    <div class="header-overlay-tint">
+        <h2>Bags Collection</h2>
+        <p>Trendy, durable, and affordable everyday carry staples</p>
+    </div>
+</header>
+
+<!-- CATALOG CONTROL BAR -->
+<div class="catalog-control-bar">
+    <span class="results-count">Showing 4 Products</span>
+    <div class="catalog-filters">
+        <select id="sort-bags">
+            <option value="popular">Sort: Popular</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+</div>
+
+<!-- MAIN CATALOG PRODUCTS CONTAINER -->
+<main class="bags-products-section">
+    <div class="bags-products-grid">
+        
+        <!-- PRODUCT 1 -->
+        <div class="bags-product-card">
+            <div class="bags-media-wrapper">
+                <span class="bags-tag-ribbon">Trending</span>
+                <img src="imgs/IMG-20260827-WA0031.jpg" alt="Bag Front" class="bags-img-front">
+                <img src="imgs/IMG-20260827-WA0031.jpg" alt="Bag Alternative" class="bags-img-back">
+                <button class="bags-cart-btn">View Details ></button>
+            </div>
+            <div class="bags-meta">
+                <h4 class="bags-title">Compact Daily Bag</h4>
+                <p class="bags-cost">₹399</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="bags-product-card">
+            <div class="bags-media-wrapper">
+                <span class="bags-tag-ribbon">Best Seller</span>
+                <img src="imgs/IMG-20260827-WA0036.jpg" alt="Canvas Tote Front" class="bags-img-front">
+                <img src="imgs/IMG-20260827-WA0036.jpg" alt="Canvas Tote Alternative" class="bags-img-back">
+                <button class="bags-cart-btn">View Details ></button>
+            </div>
+            <div class="bags-meta">
+                <h4 class="bags-title">Everyday Canvas Tote Bag</h4>
+                <p class="bags-cost">₹499</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="bags-product-card">
+            <div class="bags-media-wrapper">
+                <span class="bags-tag-ribbon">Heavy Duty</span>
+                <img src="imgs/IMG-20260827-WA0043.jpg" alt="Bag" class="bags-img-front">
+                <img src="imgs/IMG-20260827-WA0043.jpg" alt="Bag" class="bags-img-back">
+                <button class="bags-cart-btn">View Details ></button>
+            </div>
+            <div class="bags-meta">
+                <h4 class="bags-title">Minimalist Bag</h4>
+                <p class="bags-cost">₹799</p>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="bags-product-card">
+            <div class="bags-media-wrapper">
+                <span class="bags-tag-ribbon">New Arrival</span>
+                <img src="imgs/IMG-20260827-WA0055.jpg" alt="Travel Pouch Front" class="bags-img-front">
+                <img src="imgs/IMG-20260827-WA0055.jpg" alt="Travel Pouch Alternative" class="bags-img-back">
+                <button class="bags-cart-btn">View Details ></button>
+            </div>
+            <div class="bags-meta">
+                <h4 class="bags-title">Multi-Pocket Travel Pouch</h4>
+                <p class="bags-cost">₹299</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<!-- BAG POPUP -->
+
+<div id="bagPopup" class="bag-popup">
+
+    <div class="bag-popup-box">
+
+        <button id="bagPopupClose" class="bag-popup-close">×</button>
+
+        <img id="bagPopupImg" src="" alt="Bag">
+
+        <div class="bag-popup-details">
+
+            <h2 id="bagPopupName"></h2>
+
+            <h3 id="bagPopupPrice"></h3>
+
+            <p id="bagPopupDescription"></p>
+
+            <button id="bagAddCart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+
+    <script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+</body>
+</html>

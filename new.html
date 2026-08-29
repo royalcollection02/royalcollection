@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+  <nav>
+         <ul>
+            <div>
+            
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+                <h1 class="royal">
+             ROYAL COLLECTION
+                </h1>
+            </div>
+            <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+                
+                 <span class="icon-box">
+    <li>
+        <a href="cart.html" class="cart-link-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartcount">0</span>
+        </a>
+    </li>
+    <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+</span>
+        </ul> 
+</nav>
+<div class="side-menu">
+
+    <button class="close-btn" >×</button>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="new.html">New Arrivals</a></li>
+    <li><a href="cate.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</div>
+
+
+
+
+
+
+    <!-- PAGE HEADER -->
+<header class="page-header">
+    <h2>New Arrivals</h2>
+    <p>Discover the latest additions to the Royal Collection</p>
+</header>
+
+<!-- PRODUCT FILTER / COUNT BAR -->
+<div class="product-bar">
+    <span class="product-count">Showing 4 Products</span>
+    <div class="filter-dropdown">
+        <select id="sort-products">
+            <option value="latest">Sort: Latest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+</div>
+
+<!-- PRODUCT GRID SECTION -->
+<main class="products-section">
+    <div class="products-grid">
+        
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <div class="product-img-box">
+                <span class="product-badge">New</span>
+                <!-- Front image -->
+                <img src="imgs/IMG-20260821-WA0026 (3).jpg" alt="Pakistani suit" class="img-front">
+                <!-- Hover image (back/alternative view) -->
+                <img src="imgs/IMG-20260821-WA0026 (3).jpg" alt="Regal Sherwani Back" class="img-back">
+                <button class="quick-add-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-title">Pakistani Cotton Lawn Suit Set </h4>
+                <div class="product-price-row">
+                    <span class="price">₹4,999</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <div class="product-img-box">
+                <span class="product-badge">New</span>
+                <img src="imgs/IMG-20260827-WA0051.jpg" alt="Elegance Anarkali Front" class="img-front">
+                <img src="imgs/IMG-20260827-WA0051.jpg" alt="Elegance Anarkali Back" class="img-back">
+                <button class="quick-add-btn">VIEW DETAILS > </button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-title">Elegant Faux Leather Sling Bag</h4>
+                <div class="product-price-row">
+                    <span class="price">₹6,499</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+            <div class="product-img-box">
+                <span class="product-badge">New</span>
+                <img src="imgs/IMG-20260827-WA0071.jpg" alt="Premium Kurta Front" class="img-front">
+                <img src="imgs/IMG-20260827-WA0071.jpg" alt="Premium Kurta Back" class="img-back">
+                <button class="quick-add-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-title">Dual-Brand Luxury Bag Set</h4>
+                <div class="product-price-row">
+                    <span class="price">₹2,799</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+            <div class="product-img-box">
+                <span class="product-badge">New</span>
+                <img src="imgs/IMG-20260827-WA0060.jpg" alt="Luxury Saree Front" class="img-front">
+                <img src="imgs/IMG-20260827-WA0060.jpg" alt="Luxury Saree Back" class="img-back">
+                <button class="quick-add-btn">VIEW DETAILS ></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-title">Black & Red Contrast Salwar Suit</h4>
+                <div class="product-price-row">
+                    <span class="price">₹8,999</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- PRODUCT DETAILS POPUP -->
+<div class="product-modal" id="productModal">
+
+    <div class="product-modal-content">
+
+        <button class="modal-close" onclick="closeProductModal()">×</button>
+
+        <div class="modal-product-image">
+            <img id="modalImage" src="" alt="Product">
+        </div>
+
+        <div class="modal-product-details">
+
+            <span class="modal-badge">NEW ARRIVAL</span>
+
+            <h2 id="modalTitle">Product Name</h2>
+
+            <h3 id="modalPrice">₹0</h3>
+
+            <p id="modalDescription">
+                Premium quality product from Royal Collection.
+                Designed with elegance and comfort in mind.
+            </p>
+
+            <div class="product-features">
+                <p>✓ Premium Quality</p>
+                <p>✓ COD Available</p>
+                <p>✓ All Over India Delivery</p>
+                <p>✓ Easy Exchange</p>
+            </div>
+
+            <button class="modal-cart-btn" onclick="addToCart()">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a5b5e10f1d.js"></script>
+</body>
+</html>
